@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        tools:context=".view.DetailsFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            />
+
+        <TextView
+            android:id="@+id/countryNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Country name"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_weight=".6"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/capitalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Capital"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight=".6"
+            />
+
+        <TextView
+            android:id="@+id/regionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Region"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_weight=".6"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/currencyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Currency"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight=".6"
+            />
+
+        <TextView
+            android:id="@+id/clanguageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Language"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight=".6"
+            android:layout_marginBottom="30dp"
+            />
+    </LinearLayout>
+</layout>
