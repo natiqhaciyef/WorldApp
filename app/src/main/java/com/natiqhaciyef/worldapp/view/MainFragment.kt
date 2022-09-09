@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.natiqhaciyef.worldapp.R
 import com.natiqhaciyef.worldapp.adapter.CountryAdapter
+import com.natiqhaciyef.worldapp.adapter.OnClickService
 import com.natiqhaciyef.worldapp.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_main.*
 
@@ -33,6 +35,19 @@ class MainFragment : Fragment() {
 
         mainFragmentRecyclerView.layoutManager = LinearLayoutManager(context)
         mainFragmentRecyclerView.adapter = countryAdapter
+        countryAdapter.onCountryClicked(object: OnClickService{
+            override fun onItemClick(id: Int) {
+                val action = MainFragmentDirections.actionMainFragmentToDetailsFragment(id)
+                Navigation.findNavController(requireView()).navigate(action)
+            }
+        })
+
+        swipeRefreshLayout.setOnRefreshListener {
+            mainFragmentRecyclerView.visibility = View.GONE
+            mainFragmentProgressBar.visibility = View.VISIBLE
+            swipeRefreshLayout.isRefreshing = false
+            viewModel.refreshFromApi()
+        }
 
         liveDataObserve()
     }
