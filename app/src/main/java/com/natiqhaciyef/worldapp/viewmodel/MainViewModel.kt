@@ -46,7 +46,7 @@ class MainViewModel(application: Application) : CoroutinesViewModel(application)
         launch {
             val countries = CountryDatabase(getApplication()).countryDao().getAllCountries()
             showCountries(countries)
-            Toast.makeText(getApplication(),"Data from Room", Toast.LENGTH_LONG).show()
+//            Toast.makeText(getApplication(),"Data from Room", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -59,7 +59,7 @@ class MainViewModel(application: Application) : CoroutinesViewModel(application)
                 .subscribeWith(object: DisposableSingleObserver<ArrayList<CountryModel>>(){
                     override fun onSuccess(t: ArrayList<CountryModel>) {
                         storeInRoom(t)
-                        Toast.makeText(getApplication(),"Data from Room", Toast.LENGTH_LONG).show()
+//                        Toast.makeText(getApplication(),"Data from API", Toast.LENGTH_LONG).show()
                     }
 
                     override fun onError(e: Throwable) {
