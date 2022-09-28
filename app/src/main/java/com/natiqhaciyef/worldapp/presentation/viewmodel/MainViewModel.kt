@@ -1,20 +1,14 @@
-package com.natiqhaciyef.worldapp.viewmodel
+package com.natiqhaciyef.worldapp.presentation.viewmodel
 
 import android.app.Application
-import android.content.Context
 import android.widget.Toast
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.natiqhaciyef.worldapp.model.CountryModel
-import com.natiqhaciyef.worldapp.roomdb.CountryDao
-import com.natiqhaciyef.worldapp.roomdb.CountryDatabase
-import com.natiqhaciyef.worldapp.service.CountryService
-import com.natiqhaciyef.worldapp.util.CustomSharedPreferences
+import com.natiqhaciyef.worldapp.data.model.CountryModel
+import com.natiqhaciyef.worldapp.data.roomdb.CountryDatabase
+import com.natiqhaciyef.worldapp.network.service.CountryService
+import com.natiqhaciyef.worldapp.network.util.CustomSharedPreferences
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
-import io.reactivex.observers.DisposableObserver
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.launch

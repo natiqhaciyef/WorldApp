@@ -1,4 +1,4 @@
-package com.natiqhaciyef.worldapp.util
+package com.natiqhaciyef.worldapp.network.util
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -12,13 +12,15 @@ class CustomSharedPreferences {
         @Volatile private var instance: CustomSharedPreferences? = null
 
         private val lock = Any()
-        operator fun invoke(context: Context):CustomSharedPreferences = instance ?: synchronized(lock){
+        operator fun invoke(context: Context): CustomSharedPreferences = instance ?: synchronized(
+            lock
+        ){
             instance ?: createSharedPreference(context).also {
                 instance = it
             }
         }
 
-        private fun createSharedPreference(context: Context) : CustomSharedPreferences{
+        private fun createSharedPreference(context: Context) : CustomSharedPreferences {
             sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
             return CustomSharedPreferences()
         }

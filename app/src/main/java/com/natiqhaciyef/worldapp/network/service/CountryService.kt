@@ -1,6 +1,6 @@
-package com.natiqhaciyef.worldapp.service
+package com.natiqhaciyef.worldapp.network.service
 
-import com.natiqhaciyef.worldapp.model.CountryModel
+import com.natiqhaciyef.worldapp.data.model.CountryModel
 import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.Retrofit

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.natiqhaciyef.worldapp.view.MainFragment"
+        android:name="com.natiqhaciyef.worldapp.presentation.view.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.natiqhaciyef.worldapp.view.DetailsFragment"
+        android:name="com.natiqhaciyef.worldapp.presentation.view.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <action

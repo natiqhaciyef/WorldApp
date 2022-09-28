@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="5dp"
-        tools:context=".view.DetailsFragment">
+        tools:context=".presentation.view.DetailsFragment">
 
         <ImageView
             android:id="@+id/flagImage"

@@ -1,10 +1,9 @@
-package com.natiqhaciyef.worldapp.viewmodel
+package com.natiqhaciyef.worldapp.presentation.viewmodel
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.natiqhaciyef.worldapp.model.CountryModel
-import com.natiqhaciyef.worldapp.roomdb.CountryDatabase
+import com.natiqhaciyef.worldapp.data.model.CountryModel
+import com.natiqhaciyef.worldapp.data.roomdb.CountryDatabase
 import kotlinx.coroutines.launch
 
 class DetailsViewModel(application: Application) : CoroutinesViewModel(application) {

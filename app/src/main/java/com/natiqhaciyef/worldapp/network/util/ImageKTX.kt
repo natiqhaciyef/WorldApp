@@ -1,4 +1,4 @@
-package com.natiqhaciyef.worldapp.util
+package com.natiqhaciyef.worldapp.network.util
 
 import android.content.Context
 import android.widget.ImageView

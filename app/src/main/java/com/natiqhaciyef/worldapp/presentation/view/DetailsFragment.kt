@@ -1,4 +1,4 @@
-package com.natiqhaciyef.worldapp.view
+package com.natiqhaciyef.worldapp.presentation.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,10 +8,9 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.natiqhaciyef.worldapp.R
-import com.natiqhaciyef.worldapp.model.CountryModel
-import com.natiqhaciyef.worldapp.util.downloadFromUrl
-import com.natiqhaciyef.worldapp.util.placeHolder
-import com.natiqhaciyef.worldapp.viewmodel.DetailsViewModel
+import com.natiqhaciyef.worldapp.network.util.downloadFromUrl
+import com.natiqhaciyef.worldapp.network.util.placeHolder
+import com.natiqhaciyef.worldapp.presentation.viewmodel.DetailsViewModel
 import kotlinx.android.synthetic.main.fragment_details.*
 
 class DetailsFragment : Fragment() {

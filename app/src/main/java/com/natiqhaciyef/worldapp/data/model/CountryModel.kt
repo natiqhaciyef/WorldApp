@@ -1,4 +1,4 @@
-package com.natiqhaciyef.worldapp.model
+package com.natiqhaciyef.worldapp.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

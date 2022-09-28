@@ -1,10 +1,10 @@
-package com.natiqhaciyef.worldapp.roomdb
+package com.natiqhaciyef.worldapp.data.roomdb
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.natiqhaciyef.worldapp.model.CountryModel
+import com.natiqhaciyef.worldapp.data.model.CountryModel
 
 @Dao
 interface CountryDao {
@@ -12,7 +12,7 @@ interface CountryDao {
     suspend fun getAllCountries(): List<CountryModel>
 
     @Query("SELECT * FROM CountryModel WHERE id = :id")
-    suspend fun getCountryByID(id: Int):CountryModel
+    suspend fun getCountryByID(id: Int): CountryModel
 
     @Insert
     suspend fun insertAllCountries(vararg country: CountryModel): List<Long>

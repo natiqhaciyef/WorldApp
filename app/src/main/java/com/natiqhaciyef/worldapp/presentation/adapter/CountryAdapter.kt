@@ -1,16 +1,12 @@
-package com.natiqhaciyef.worldapp.adapter
+package com.natiqhaciyef.worldapp.presentation.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.natiqhaciyef.worldapp.R
 import com.natiqhaciyef.worldapp.databinding.RecyclerItemRowBinding
-import com.natiqhaciyef.worldapp.model.CountryModel
-import com.natiqhaciyef.worldapp.util.downloadFromUrl
-import com.natiqhaciyef.worldapp.util.placeHolder
+import com.natiqhaciyef.worldapp.data.model.CountryModel
 
 
 class CountryAdapter(val list: ArrayList<CountryModel>) : RecyclerView.Adapter<CountryAdapter.CountryHolder>() {

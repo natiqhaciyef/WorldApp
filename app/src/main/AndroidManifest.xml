@@ -16,7 +16,7 @@
         android:theme="@style/Theme.WorldApp"
         tools:targetApi="31">
         <activity
-            android:name=".view.MainActivity"
+            android:name="com.natiqhaciyef.worldapp.presentation.view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

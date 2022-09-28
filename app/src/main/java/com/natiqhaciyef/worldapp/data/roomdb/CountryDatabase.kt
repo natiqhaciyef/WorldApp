@@ -1,12 +1,10 @@
-package com.natiqhaciyef.worldapp.roomdb
+package com.natiqhaciyef.worldapp.data.roomdb
 
 import android.content.Context
 import androidx.room.Database
-import androidx.room.Query
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.natiqhaciyef.worldapp.model.CountryModel
-import kotlinx.coroutines.InternalCoroutinesApi
+import com.natiqhaciyef.worldapp.data.model.CountryModel
 
 @Database(entities = [CountryModel::class], version = 1)
 abstract class CountryDatabase: RoomDatabase() {
