@@ -52,8 +52,7 @@ class MainViewModel(application: Application) : CoroutinesViewModel(application)
 
     private fun getDataFromAPI(){
         countryLoad.value = true
-        disposable.add(
-            service.getCountry()
+        disposable.add(service.getCountry()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object: DisposableSingleObserver<ArrayList<CountryModel>>(){
